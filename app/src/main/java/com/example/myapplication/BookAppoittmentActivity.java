@@ -1,8 +1,8 @@
 package com.example.myapplication;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
@@ -95,14 +95,14 @@ public class BookAppoittmentActivity extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 month = month + 1;
-                DateButton.setText(year+'/'+month+'/'+year);
+                DateButton.setText(year+"/"+month+"/"+year);
             }
         };
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);
         int day = cal.get(Calendar.DAY_OF_MONTH);
-        datePickerDialog = new DatePickerDialog(this, 0, dateSetListener, year, month,day);
+        datePickerDialog = new DatePickerDialog(this, R.style.CustomDatePickerDialog, dateSetListener, year, month,day);
         datePickerDialog.getDatePicker().setMinDate(cal.getTimeInMillis()+86400000);
     }
 
@@ -110,7 +110,7 @@ public class BookAppoittmentActivity extends AppCompatActivity {
         TimePickerDialog.OnTimeSetListener timeSetListener = new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                TimeButton.setText(hourOfDay+':'+minute);
+                TimeButton.setText(hourOfDay+":"+minute);
             }
         };
         Calendar cal = Calendar.getInstance();
