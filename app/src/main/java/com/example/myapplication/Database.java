@@ -21,6 +21,9 @@ public class Database extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String qry1 = "create table users(username text, email text, password text) ";
         sqLiteDatabase.execSQL(qry1);
+
+        String qry2 = "create table cart(username text, product text, price float, orderType text)";
+        sqLiteDatabase.execSQL(qry2);
     }
 
     @Override
@@ -49,5 +52,39 @@ public class Database extends SQLiteOpenHelper {
             result = 1;
         }
         return result;
+    }
+
+    public void addToCart(String username, String product, float price, String orderType){
+        ContentValues cv = new ContentValues();
+        cv.put("username", username);
+        cv.put("product", product);
+        cv.put("price", price);
+        cv.put("orderType", orderType);
+        SQLiteDatabase db = getWritableDatabase();
+        db.insert("cart", null, cv);
+        db.close();
+    }
+
+    public int checkCart(String username, String product){
+        int result = 0;
+        String str[] = new String[2];
+        str[0] = username;
+        str[1] = product;
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cq = db.rawQuery("select * from cart where username = ? and product = ?", str);
+        if(cq.moveToFirst()){
+            result = 1;
+        }
+        db.close();
+        return result;
+    }
+
+    public void removeCart(String username, String orderType){
+        String str[] = new String[2];
+        str[0] = username;
+        str[1] = orderType;
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete("cart", "username = ? and orderType = ?", str);
+        db.close();
     }
 }

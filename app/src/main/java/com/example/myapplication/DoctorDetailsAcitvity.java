@@ -64,7 +64,7 @@ public class DoctorDetailsAcitvity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_details_acitvity);
 
-        tv = findViewById(R.id.titleDDTitle);
+        tv = findViewById(R.id.titleLabTestDetailsLocation);
 
         Intent it = getIntent();
         String title = it.getStringExtra("title").toString();
@@ -86,7 +86,7 @@ public class DoctorDetailsAcitvity extends AppCompatActivity {
             Doctor_Details = details5;
         }
 
-        btn = findViewById(R.id.buttonDD);
+        btn = findViewById(R.id.buttonLabTestBackButton);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -110,7 +110,7 @@ public class DoctorDetailsAcitvity extends AppCompatActivity {
                 new String []{"line1", "line2", "line3", "line4", "line5"},
                 new int []{R.id.lineA, R.id.lineB, R.id.lineC, R.id.lineD, R.id.lineE});
 
-        ListView ls = findViewById(R.id.listViewDD);
+        ListView ls = findViewById(R.id.listViewLabTest);
         ls.setAdapter(sa);
 
         ls.setOnItemClickListener(new AdapterView.OnItemClickListener() {
