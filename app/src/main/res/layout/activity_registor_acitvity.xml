@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.099" />
 
     <TextView
-        android:id="@+id/textViewAppTitle"
+        android:id="@+id/textViewCheckouttitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Registor"
@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="0.059" />
 
     <EditText
-        android:id="@+id/editTextAppAddress"
+        android:id="@+id/editTextCheckoutAddress"
         android:layout_width="314dp"
         android:layout_height="52dp"
         android:layout_marginTop="28dp"
@@ -57,10 +57,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextAppFullName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCheckoutName" />
 
     <EditText
-        android:id="@+id/editTextAppFullName"
+        android:id="@+id/editTextCheckoutName"
         android:layout_width="314dp"
         android:layout_height="52dp"
         android:layout_marginTop="44dp"
@@ -81,10 +81,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAppTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewCheckouttitle" />
 
     <EditText
-        android:id="@+id/editTextAppContactNumber"
+        android:id="@+id/editTextCheckoutPincode"
         android:layout_width="314dp"
         android:layout_height="52dp"
         android:layout_marginTop="28dp"
@@ -105,10 +105,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextAppAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCheckoutAddress" />
 
     <EditText
-        android:id="@+id/editTextAppConsFees"
+        android:id="@+id/editTextCheckoutContactNumber"
         android:layout_width="314dp"
         android:layout_height="52dp"
         android:layout_marginTop="28dp"
@@ -129,10 +129,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextAppContactNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCheckoutPincode" />
 
     <Button
-        android:id="@+id/buttonBookAppointment"
+        android:id="@+id/buttonCheckoutBook"
         android:layout_width="293dp"
         android:layout_height="48dp"
         android:layout_marginTop="40dp"
@@ -140,7 +140,7 @@
         android:text="Registor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextAppConsFees" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCheckoutContactNumber" />
 
     <TextView
         android:id="@+id/textViewAlreadyHaveAnAccount"
@@ -151,5 +151,5 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonBookAppointment" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonCheckoutBook" />
 </androidx.constraintlayout.widget.ConstraintLayout>

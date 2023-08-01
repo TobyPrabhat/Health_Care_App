@@ -64,7 +64,7 @@ public class DoctorDetailsAcitvity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_details_acitvity);
 
-        tv = findViewById(R.id.titleLabTestDetailsLocation);
+        tv = findViewById(R.id.titleCartLabLocation);
 
         Intent it = getIntent();
         String title = it.getStringExtra("title").toString();
@@ -110,7 +110,7 @@ public class DoctorDetailsAcitvity extends AppCompatActivity {
                 new String []{"line1", "line2", "line3", "line4", "line5"},
                 new int []{R.id.lineA, R.id.lineB, R.id.lineC, R.id.lineD, R.id.lineE});
 
-        ListView ls = findViewById(R.id.listViewLabTest);
+        ListView ls = findViewById(R.id.listViewCartLab);
         ls.setAdapter(sa);
 
         ls.setOnItemClickListener(new AdapterView.OnItemClickListener() {

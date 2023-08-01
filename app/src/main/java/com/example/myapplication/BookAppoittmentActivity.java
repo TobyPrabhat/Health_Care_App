@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
@@ -14,7 +13,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import java.sql.Time;
 import java.util.Calendar;
 
 public class BookAppoittmentActivity extends AppCompatActivity {
@@ -29,14 +27,14 @@ public class BookAppoittmentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_appoittment);
 
-        tv1 = findViewById(R.id.textViewAppTitle);
-        ed1 = findViewById(R.id.editTextAppFullName);
-        ed2 = findViewById(R.id.editTextAppAddress);
-        ed3 = findViewById(R.id.editTextAppContactNumber);
-        ed4 = findViewById(R.id.editTextAppConsFees);
-        DateButton = findViewById(R.id.buttonAppDate);
-        TimeButton = findViewById(R.id.buttonAppTime);
-        btnAppointment = findViewById(R.id.buttonBookAppointment);
+        tv1 = findViewById(R.id.textViewCheckouttitle);
+        ed1 = findViewById(R.id.editTextCheckoutName);
+        ed2 = findViewById(R.id.editTextCheckoutAddress);
+        ed3 = findViewById(R.id.editTextCheckoutPincode);
+        ed4 = findViewById(R.id.editTextCheckoutContactNumber);
+        DateButton = findViewById(R.id.buttonDeliveryDate);
+        TimeButton = findViewById(R.id.buttonDeliveryTime);
+        btnAppointment = findViewById(R.id.buttonCheckoutBook);
         btnBack = findViewById(R.id.buttonBackBookAppointment);
 
 

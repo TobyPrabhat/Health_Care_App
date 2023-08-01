@@ -19,11 +19,11 @@ public class RegistorAcitvity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registor_acitvity);
-        edUsername = findViewById(R.id.editTextAppAddress);
-        edEmail = findViewById(R.id.editTextAppFullName);
-        edPassword = findViewById(R.id.editTextAppContactNumber);
-        edConfirmPassword = findViewById(R.id.editTextAppConsFees);
-        btn = findViewById(R.id.buttonBookAppointment);
+        edUsername = findViewById(R.id.editTextCheckoutAddress);
+        edEmail = findViewById(R.id.editTextCheckoutName);
+        edPassword = findViewById(R.id.editTextCheckoutPincode);
+        edConfirmPassword = findViewById(R.id.editTextCheckoutContactNumber);
+        btn = findViewById(R.id.buttonCheckoutBook);
         tv = findViewById(R.id.textViewAlreadyHaveAnAccount);
 
 

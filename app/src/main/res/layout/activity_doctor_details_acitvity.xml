@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.045" />
 
     <TextView
-        android:id="@+id/titleLabTestDetailsLocation"
+        android:id="@+id/titleCartLabLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
@@ -39,7 +39,7 @@
         app:layout_constraintVertical_bias="0.02" />
 
     <ListView
-        android:id="@+id/listViewLabTest"
+        android:id="@+id/listViewCartLab"
         android:layout_width="360dp"
         android:layout_height="450dp"
         android:layout_marginBottom="10dp"
@@ -49,7 +49,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleLabTestDetailsLocation" />
+        app:layout_constraintTop_toBottomOf="@+id/titleCartLabLocation" />
 
     <Button
         android:id="@+id/buttonLabTestBackButton"

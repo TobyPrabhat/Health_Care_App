@@ -3,7 +3,6 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.MediaParser;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -61,7 +60,7 @@ public class LabTestActivity extends AppCompatActivity {
 
         btnBack = findViewById(R.id.buttonLabTestBackButton);
         btnGoToCart = findViewById(R.id.buttonLabTestGoToCart);
-        listView = findViewById(R.id.listViewLabTest);
+        listView = findViewById(R.id.listViewCartLab);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,6 +96,14 @@ public class LabTestActivity extends AppCompatActivity {
                 it.putExtra("text2", package_details[position]);
                 it.putExtra("text3", packages[position][4]);
                 startActivity(it);
+            }
+        });
+
+
+        btnGoToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LabTestActivity.this, CartLabActivity.class));
             }
         });
     }

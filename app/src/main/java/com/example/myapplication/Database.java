@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import java.io.Console;
+import java.util.ArrayList;
 
 public class Database extends SQLiteOpenHelper {
 
@@ -86,5 +87,23 @@ public class Database extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         db.delete("cart", "username = ? and orderType = ?", str);
         db.close();
+    }
+
+    public ArrayList getCartData(String username, String orderType){
+        ArrayList<String> newArr = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
+        String str[] = new String[2];
+        str[0] = username;
+        str[1] = orderType;
+        Cursor cq = db.rawQuery("select * from cart where username = ? and orderType = ?", str);
+        if(cq.moveToFirst()){
+            do {
+                String product = cq.getString(1);
+                String price = cq.getString(2);
+                newArr.add(product + "$" + price);
+            }while (cq.moveToNext());
+        }
+        db.close();
+        return newArr;
     }
 }
